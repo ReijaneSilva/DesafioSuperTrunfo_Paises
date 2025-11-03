@@ -1,5 +1,5 @@
 #include <stdio.h>
-// Desafio Super Trunfo - Países
+// Desafio Super Trunfo - Países Nível Novato
 // Tarefa 1 - Cadastro de cartas
 // Este e o nível Novato - O jogador deverá criar as cartas entrando com as principais características do Estado e cidade escolhidos
 
