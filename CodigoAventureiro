@@ -1,0 +1,67 @@
+
+#include <stdio.h>
+
+// Desafio Super Trunfo - Países
+// Nível Aventureiro - Cadastro de cartas com propriedades calculadas
+
+int main() {
+    char estado[30];
+    int codigo;
+    char cidade[40];
+    int populacao;
+    float areacidade;
+    float pib;
+    int pontosTuristicos;
+    float densidadePopulacional;
+    float pibPerCapita;
+
+    printf("Cadastro de Cartas - Super Trunfo Países\n");
+
+    printf("Entre com o Estado: \n");
+    scanf("%s", estado);
+
+    printf("Entre com o Código DDD de Área (3 dígitos): \n");
+    scanf("%d", &codigo);
+
+    printf("Entre com o nome da Cidade: \n");
+    scanf("%s", cidade);
+
+    printf("Entre com a quantidade da População: \n");
+    scanf("%d", &populacao);
+
+    printf("Entre com a Área da Cidade (km²): \n");
+    scanf("%f", &areacidade);
+
+    printf("Entre com o PIB (bilhões de reais): \n");
+    scanf("%f", &pib);
+
+    printf("Entre com o número de Pontos Turísticos da Cidade: \n");
+    scanf("%d", &pontosTuristicos);
+
+    // Cálculos adicionais
+    if (areacidade > 0) {
+        densidadePopulacional = populacao / areacidade;
+    } else {
+        densidadePopulacional = 0;
+    }
+
+    if (populacao > 0) {
+        pibPerCapita = (pib * 1000000000) / populacao; // PIB convertido para reais
+    } else {
+        pibPerCapita = 0;
+    }
+
+    // Exibir os dados cadastrados
+    printf("\n--- Dados da Carta ---\n");
+    printf("Estado: %s\n", estado);
+    printf("Código DDD: %d\n", codigo);
+    printf("Cidade: %s\n", cidade);
+    printf("População: %d\n", populacao);
+    printf("Área em km²: %.2f\n", areacidade);
+    printf("PIB: %.2f bilhões\n", pib);
+    printf("Pontos Turísticos: %d\n", pontosTuristicos);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita);
+
+    return 0;
+}
