@@ -31,7 +31,7 @@ int main() {
     printf("Entre com o número de Pontos Turísticos da Cidade: \n");
     scanf("%d", &pontosTuristicos);
    
-   
+     // Exibir os dados cadastrados
 
             printf("\nCarta %s\n", cartas[index].codigo);
             printf("População: ");
@@ -45,16 +45,6 @@ int main() {
 
             index++;
         }
-    }
-
-    // Exibir os dados cadastrados
-    printf("\nCartas cadastradas:\n");
-    for (i = 0; i < NUM_ESTADOS * NUM_CIDADES; i++) {
-        printf("\nCódigo: %s\n", cartas[i].codigo);
-        printf("População: %d\n", cartas[i].populacao);
-        printf("Área: %.2f km²\n", cartas[i].area);
-        printf("PIB: %.2f bilhões\n", cartas[i].pib);
-        printf("Pontos turísticos: %d\n", cartas[i].pontosTuristicos);
     }
 
     return 0;
