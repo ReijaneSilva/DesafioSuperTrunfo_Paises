@@ -2,13 +2,12 @@
 // Desafio Super Trunfo - Países
 // Tarefa 1 - Cadastro de cartas
 // Este e o nível Novato - O jogador deverá criar as cartas entrando com as principais características do Estado e cidade escolhidos
-define NUM_ESTADOS 8
-define NUM_CIDADES 4
+
 
 int main() {
-    char estado[30]
-    char codigo[3]
-    char cidade[40]
+    char estado[30];
+    int codigo[3];
+    char cidade[40];
     int populacao;
     float areacidade;
     float pib;
@@ -18,7 +17,7 @@ int main() {
    
     printf("Entre com o Estado: \n");
     scanf("%s", &estado);
-    printf("Entre com o Código de Área (3 dígitos): \n");
+    printf("Entre com o Código DDD de Área (3 dígitos): \n");
     scanf("%d", &codigo);
     printf("Entre com o nome da Cidade: \n");
     scanf("%s", &cidade);
@@ -33,19 +32,14 @@ int main() {
    
      // Exibir os dados cadastrados
 
-            printf("\nCarta %s\n", cartas[index].codigo);
-            printf("População: ");
-            scanf("%d", &cartas[index].populacao);
-            printf("Área (km²): ");
-            scanf("%f", &cartas[index].area);
-            printf("PIB (em bilhões): ");
-            scanf("%f", &cartas[index].pib);
-            printf("Número de pontos turísticos: ");
-            scanf("%d", &cartas[index].pontosTuristicos);
-
-            index++;
-        }
-    }
+    printf("Estado: %s\n", estado);
+    printf("Codigo: %d\n", codigo);
+    printf("Cidade: %s\n", cidade);
+    printf("População: %d\n", populacao);
+    printf("Area em Km²: %.2f\n", areacidade);
+    printf("Pib: %.2f\n", pib);
+    printf("Pontos Turisticos: %d\n", pontosTuristicos);
 
     return 0;
+   
 }
