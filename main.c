@@ -1,28 +1,37 @@
-include <stdio.h>
-
+#include <stdio.h>
+// Desafio Super Trunfo - Países
+// Tarefa 1 - Cadastro de cartas
+// Este e o nível Novato - O jogador deverá criar as cartas entrando com as principais características do Estado e cidade escolhidos
 define NUM_ESTADOS 8
 define NUM_CIDADES 4
 
-// Estrutura para armazenar os dados de uma cidade
-typedef struct {
-    char codigo[4]; // Ex: A01, B02
+int main() {
+    char estado[30]
+    char codigo[3]
+    char cidade[40]
     int populacao;
-    float area;
+    float areacidade;
     float pib;
     int pontosTuristicos;
-} Cidade;
-
-int main() {
-    Cidade cartas[NUM_ESTADOS * NUM_CIDADES];
-    char estados[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
-    int i, j, index = 0;
-
+    
     printf("Cadastro de Cartas - Super Trunfo Países\n");
-
-    for (i = 0; i < NUM_ESTADOS; i++) {
-        for (j = 1; j <= NUM_CIDADES; j++) {
-            // Gerar código da carta
-            sprintf(cartas[index].codigo, "%c%02d", estados[i], j);
+   
+    printf("Entre com o Estado: \n");
+    scanf("%s", &estado);
+    printf("Entre com o Código de Área (3 dígitos): \n");
+    scanf("%d", &codigo);
+    printf("Entre com o nome da Cidade: \n");
+    scanf("%s", &cidade);
+    printf("Entre com a quantidade da População: \n");
+    scanf("%d", &populacao);
+    printf("Entre com a Área da Cidade (km2): \n");
+    scanf("%f", &areacidade);
+    printf("Entre com o PIB (bilhoes de reais): \n");
+    scanf("%f", &pib);
+    printf("Entre com o número de Pontos Turísticos da Cidade: \n");
+    scanf("%d", &pontosTuristicos);
+   
+   
 
             printf("\nCarta %s\n", cartas[index].codigo);
             printf("População: ");
